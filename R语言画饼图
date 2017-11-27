@@ -1,0 +1,7 @@
+slices<-c(137.94,67.18,30.10,26.90,23.40,12.01,4.9) 
+lbls<-c("construction","woodland","greenland","open ground","farmland","lake and reservoir","others")
+pct <- round(slices/sum(slices)*100)
+lbls2 <-paste(lbls," ",pct ,"%",sep = "")
+pie(slices,labels = lbls2,col = rainbow(length(lbls2)),main="Proportion of MaozhouRiver Basin Landuse",
+    col.main="red",col.axis="red",col.lab="red",
+    cex.main=1,cex.axis=200,cex.lab=200)
